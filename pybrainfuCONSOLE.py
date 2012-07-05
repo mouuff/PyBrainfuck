@@ -7,27 +7,32 @@ def BF(script):
 	table = [0]*3000
 	pointer = 0
 	progress = 0
-	out = ''
 	loop = 0
+	if (script.count("[") != script.count("]")):
+		return list(set(table))
+	
 	while (progress < len(script)):
 		if (script[progress] in '+-<>.,[]'):
 			if (script[progress] == '+'):
 				table[pointer] += 1
 				
 			elif (script[progress] == '-'):
-				table[pointer] -= 1
+				if table[pointer] > 0:
+					table[pointer] -= 1
 				
 			elif (script[progress] == '>'):
 				pointer += 1
 				
 			elif (script[progress] == '<'):
-				pointer -= 1
+				if (pointer > 0):
+					pointer -= 1
 				
 			elif (script[progress] == '.'):
 				try:
-					out += (chr(table[pointer]))
+					stdout.write(chr(table[pointer]))
 				except (ValueError):
-					out += '?'
+					stdout.write('?')
+				stdout.flush()
 				
 			elif (script[progress] == ','):
 				table[pointer] = ord(raw_input())
@@ -45,12 +50,10 @@ def BF(script):
 							progress = 0
 							script = script[script.find("]")+1:]
 		progress += 1
-	print list(set(table))
-	return out
+	return list(set(table))
 
 if __name__ == '__main__':
 	try:
-		print BF(open(argv[1]).read())
+		BF(open(argv[1]).read())
 	except (IOError, IndexError):
-		print("Error, file not found or arguements error")
-		
+		print("Error, file not found or arguements error\n")
