@@ -42,7 +42,11 @@ def BF(script):
 						progress = script.find('[')
 					else:
 						loop -= 1
+						if (loop <= 0):
+							progress = 0
+							script = script[script.find("]")+1:]
 		progress += 1
+	print list(set(table))
 	return out
 
 

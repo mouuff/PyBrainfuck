@@ -1,5 +1,8 @@
-A python crap brainfu*** interpreter :)
-[mou@mou brainfuck]$ python pybrainfuCONSOLE.py -f test.bf
+A python crap brainfu*** interpreter
+not fully working atm
+
+[mou@mou brainfuck]$ python pybrainfuCONSOLE.py test.bf
+[0, 33, 10, 100, 87]
 Hello World!
 
 and GUI version:
