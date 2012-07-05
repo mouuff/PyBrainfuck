@@ -1,1 +1,7 @@
 A python crap brainfu*** interpreter :)
+[mou@mou brainfuck]$ python pybrainfuCONSOLE.py -f test.bf
+Hello World!
+
+and GUI version:
+
+http://i.imgur.com/bZx1Z.png
