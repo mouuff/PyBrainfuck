@@ -1,10 +1,10 @@
 A python crap brainfu*** interpreter
 not fully working atm
+use # to debug
 
 [mou@mou brainfuck]$ python pybrainfuCONSOLE.py test.bf
-[0, 33, 10, 100, 87]
 Hello World!
 
 and GUI version:
 
-http://i.imgur.com/bZx1Z.png
+http://i.imgur.com/xtR11.png
