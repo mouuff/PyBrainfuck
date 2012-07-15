@@ -7,19 +7,6 @@ __all__ = ('pybf')
 __doc__ = ('''
 PyBF
 A tiny and bugged brainfuck interpreter
-Classes:
-	pybf
-		load(script):
-			load a script
-		add(part)
-			add a part of the script to the script
-		clean()
-			clean up the code, useful on big scripts
-		check()
-			do a syntax check, returns a SyntaxError if the script is wrong
-		execute()
-			execute the script, use load before.
-			you can use # to set ad break point to debug your code.
 ''')
 
 class pybf:
