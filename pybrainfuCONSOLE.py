@@ -4,14 +4,13 @@ __all__ = ('pybf')
 __doc__ = ('''
 PyBF
 A tiny and bugged brainfuck interpreter
-
-Version 0.1
 ''')
+__version__ = "1.0"
 
 class pybf:
 	def __init__(self):
 		'''Brainfuck interpreter'''
-		self.table = [0]*30000
+		self.table = [0]*3000
 		self.pointer = 0
 		self.progress = 0
 		self.loop = 0
