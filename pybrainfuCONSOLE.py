@@ -56,7 +56,7 @@ class BF:
 						loops -= 1
 						
 			elif (char==","):
-				self.table[self.pointer] = ord(raw_input())
+				self.array[self.pointer] = ord(raw_input())
 			elif (char=="."):
 				try:
 					stdout.write(chr(self.array[self.pointer]))
